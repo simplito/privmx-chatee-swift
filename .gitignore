@@ -1,0 +1,9 @@
+*/.DS_Store
+.DS_Store
+*/xcuserdata
+*.xcuserdata
+*.xcuserdatad
+*/*.xcuserdata
+*/*.xcuserdatad
+*/xcuserdatad
+PrivMX\ Chatee/PrivMX\ Chatee.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
