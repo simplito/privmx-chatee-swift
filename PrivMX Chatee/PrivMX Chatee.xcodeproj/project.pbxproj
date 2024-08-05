@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0AB34E22C60C91200FC3870 /* PrivMXEndpointSwiftExtra in Frameworks */ = {isa = PBXBuildFile; productRef = B0AB34E12C60C91200FC3870 /* PrivMXEndpointSwiftExtra */; };
 		E00CF24C2BC57A5E00B9E7E6 /* AppSetupState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00CF24B2BC57A5E00B9E7E6 /* AppSetupState.swift */; };
 		E02B55382BDA4B7A0065A4D0 /* OnConnectExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B55372BDA4B7A0065A4D0 /* OnConnectExecutor.swift */; };
 		E02B553A2BDA4C650065A4D0 /* String+cleanDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B55392BDA4C650065A4D0 /* String+cleanDomain.swift */; };
@@ -44,7 +45,6 @@
 		E06D54722C50F3E500FA63D2 /* CompareBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06D54712C50F3E500FA63D2 /* CompareBindings.swift */; };
 		E06D54742C50F46800FA63D2 /* AuthorContentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06D54732C50F46800FA63D2 /* AuthorContentRow.swift */; };
 		E06D54762C50F4A100FA63D2 /* ThreadInfo+userList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06D54752C50F4A100FA63D2 /* ThreadInfo+userList.swift */; };
-		E06D54792C51075000FA63D2 /* PrivMXEndpointSwiftExtra in Frameworks */ = {isa = PBXBuildFile; productRef = E06D54782C51075000FA63D2 /* PrivMXEndpointSwiftExtra */; };
 		E06D547D2C5117A300FA63D2 /* Data+rawCppString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06D547C2C5117A300FA63D2 /* Data+rawCppString.swift */; };
 		E0717B432C4FC13200E3A579 /* InviteTokenBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0717B252C4FC13200E3A579 /* InviteTokenBody.swift */; };
 		E0717B442C4FC13200E3A579 /* SignInBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0717B262C4FC13200E3A579 /* SignInBody.swift */; };
@@ -125,8 +125,6 @@
 		E087F6B52C2BDEC700C4B568 /* MessageFileUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E087F6562C2BDEC700C4B568 /* MessageFileUpload.swift */; };
 		E087F6B82C2CAEB900C4B568 /* ThreadsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E087F6B72C2CAEB900C4B568 /* ThreadsModel.swift */; };
 		E087F6B92C2CAEB900C4B568 /* ThreadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E087F6B62C2CAEB900C4B568 /* ThreadModel.swift */; };
-		E088F8BB2C52713800B74EF4 /* Message+HashableIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E088F8BA2C52713800B74EF4 /* Message+HashableIdentifiable.swift */; };
-		E088F8BD2C5275A800B74EF4 /* FileInfo+HashableIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E088F8BC2C5275A800B74EF4 /* FileInfo+HashableIdentifiable.swift */; };
 		E08CF0042B5FEFC800086D1A /* FolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08CF0032B5FEFC800086D1A /* FolderView.swift */; };
 		E08CF00A2B5FF9A300086D1A /* FileRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08CF0092B5FF9A300086D1A /* FileRow.swift */; };
 		E09148A42BA47DDE0082D361 /* SimpleContentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09148A32BA47DDE0082D361 /* SimpleContentRow.swift */; };
@@ -263,8 +261,6 @@
 		E087F67F2C2BDEC700C4B568 /* ColorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorProvider.swift; sourceTree = "<group>"; };
 		E087F6B62C2CAEB900C4B568 /* ThreadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadModel.swift; sourceTree = "<group>"; };
 		E087F6B72C2CAEB900C4B568 /* ThreadsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsModel.swift; sourceTree = "<group>"; };
-		E088F8BA2C52713800B74EF4 /* Message+HashableIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message+HashableIdentifiable.swift"; sourceTree = "<group>"; };
-		E088F8BC2C5275A800B74EF4 /* FileInfo+HashableIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileInfo+HashableIdentifiable.swift"; sourceTree = "<group>"; };
 		E08CF0032B5FEFC800086D1A /* FolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderView.swift; sourceTree = "<group>"; };
 		E08CF0092B5FF9A300086D1A /* FileRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileRow.swift; sourceTree = "<group>"; };
 		E08CF0212B63C8A700086D1A /* ChateeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChateeApp.entitlements; sourceTree = "<group>"; };
@@ -291,7 +287,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E06D54792C51075000FA63D2 /* PrivMXEndpointSwiftExtra in Frameworks */,
+				B0AB34E22C60C91200FC3870 /* PrivMXEndpointSwiftExtra in Frameworks */,
 				E0717B612C4FC1CA00E3A579 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,8 +300,6 @@
 			children = (
 				E06D54752C50F4A100FA63D2 /* ThreadInfo+userList.swift */,
 				E06D547C2C5117A300FA63D2 /* Data+rawCppString.swift */,
-				E088F8BA2C52713800B74EF4 /* Message+HashableIdentifiable.swift */,
-				E088F8BC2C5275A800B74EF4 /* FileInfo+HashableIdentifiable.swift */,
 			);
 			path = PlatformExtensions;
 			sourceTree = "<group>";
@@ -765,7 +759,7 @@
 			name = "PrivMX Chatee";
 			packageProductDependencies = (
 				E0717B602C4FC1CA00E3A579 /* Alamofire */,
-				E06D54782C51075000FA63D2 /* PrivMXEndpointSwiftExtra */,
+				B0AB34E12C60C91200FC3870 /* PrivMXEndpointSwiftExtra */,
 			);
 			productName = ChateeApp;
 			productReference = E0BEAB692B35C3B300A7ACDE /* PrivMX Chatee.app */;
@@ -798,7 +792,7 @@
 			mainGroup = E0BEAB602B35C3B300A7ACDE;
 			packageReferences = (
 				E0717B5F2C4FC1CA00E3A579 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				E06D54772C51075000FA63D2 /* XCRemoteSwiftPackageReference "privmx-endpoint-swift-extra" */,
+				B0AB34E02C60C91200FC3870 /* XCRemoteSwiftPackageReference "privmx-endpoint-swift-extra" */,
 			);
 			productRefGroup = E0BEAB6A2B35C3B300A7ACDE /* Products */;
 			projectDirPath = "";
@@ -839,7 +833,6 @@
 				E039395F2BB6A442007E549E /* MultiplatformFileDownloader.swift in Sources */,
 				E0BEAB6F2B35C3B300A7ACDE /* ContentView.swift in Sources */,
 				E08CF00A2B5FF9A300086D1A /* FileRow.swift in Sources */,
-				E088F8BB2C52713800B74EF4 /* Message+HashableIdentifiable.swift in Sources */,
 				E06101022B6BCFCB006F5826 /* PlatformConnectingState.swift in Sources */,
 				E087F6822C2BDEC700C4B568 /* String+pmxSortOrder.swift in Sources */,
 				E087F6832C2BDEC700C4B568 /* Array+toUserWithPubKey.swift in Sources */,
@@ -856,7 +849,6 @@
 				E0717B462C4FC13200E3A579 /* APIService.swift in Sources */,
 				E0717B552C4FC13200E3A579 /* PostSginUp.swift in Sources */,
 				E0717B512C4FC13200E3A579 /* SignUpResponse.swift in Sources */,
-				E088F8BD2C5275A800B74EF4 /* FileInfo+HashableIdentifiable.swift in Sources */,
 				E087F68B2C2BDEC700C4B568 /* MessageContent.swift in Sources */,
 				E0717B572C4FC13200E3A579 /* APIClient.swift in Sources */,
 				E087F68D2C2BDEC700C4B568 /* ButtonComponent.swift in Sources */,
@@ -1189,12 +1181,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E06D54772C51075000FA63D2 /* XCRemoteSwiftPackageReference "privmx-endpoint-swift-extra" */ = {
+		B0AB34E02C60C91200FC3870 /* XCRemoteSwiftPackageReference "privmx-endpoint-swift-extra" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitlab.simplito.com/mobile/privmx/iOS/wrappers/privmx-endpoint-swift-extra";
+			repositoryURL = "https://github.com/simplito/privmx-endpoint-swift-extra";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
+				minimumVersion = 1.6.0;
 			};
 		};
 		E0717B5F2C4FC1CA00E3A579 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -1208,9 +1200,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E06D54782C51075000FA63D2 /* PrivMXEndpointSwiftExtra */ = {
+		B0AB34E12C60C91200FC3870 /* PrivMXEndpointSwiftExtra */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E06D54772C51075000FA63D2 /* XCRemoteSwiftPackageReference "privmx-endpoint-swift-extra" */;
+			package = B0AB34E02C60C91200FC3870 /* XCRemoteSwiftPackageReference "privmx-endpoint-swift-extra" */;
 			productName = PrivMXEndpointSwiftExtra;
 		};
 		E0717B602C4FC1CA00E3A579 /* Alamofire */ = {
