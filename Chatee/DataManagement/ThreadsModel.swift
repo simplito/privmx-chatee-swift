@@ -197,7 +197,9 @@ open class ThreadsModel: Observable, ObservableObject {
 				in: contextID, for: users.toUserWithPubKey(),
 				managedBy: managers.toUserWithPubKey(),
 				withPublicMeta: Data(),
-				withPrivateMeta: threadPrivateMetaEncoded)
+				withPrivateMeta: threadPrivateMetaEncoded,
+				withPolicies: nil
+			)
 		else {
 			var err = privmx.InternalError()
 			err.name = "New Thread Error"
