@@ -152,7 +152,8 @@ open class StoresModel: ObservableObject {
 			let newStoreId = try self.endpoint?.storeApi?.createStore(
 				in: contextID, for: users.toUserWithPubKey(),
 				managedBy: managers.toUserWithPubKey(), withPublicMeta: Data(),
-				withPrivateMeta: storePrivateMetaEncoded)
+				withPrivateMeta: storePrivateMetaEncoded,
+				withPolicies: nil)
 		else {
 			var err = privmx.InternalError()
 			err.name = "New Store Error"
