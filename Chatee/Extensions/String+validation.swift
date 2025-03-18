@@ -14,7 +14,7 @@ import Foundation
 extension String {
 
 	func isValidDomain() -> Bool {
-		let domainRegex = "^[_a-z0-9]*.[_a-z0-9.]*$"
+		let domainRegex = "^[a-z0-9](?[a-z0-9-]*[a-z0-9]?)(?\\.[a-z0-9](?[a-z0-9-]*[a-z0-9]))*(?:[1-9][0-9]*)?$"
 		return NSPredicate(format: "SELF MATCHES %@", domainRegex).evaluate(with: self)
 	}
 

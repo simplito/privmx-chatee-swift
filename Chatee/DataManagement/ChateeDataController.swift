@@ -185,15 +185,20 @@ public class ChateeDataController: ObservableObject {
   /// - Throws: `ChateeError.invalidDomain` if the domain is invalid.
   func setdomainName(_ fullDomain: String) throws {
     var _fullDomain = fullDomain
-    if fullDomain.starts(with: "http") {
+    if fullDomain.starts(with: "http://") {
       _fullDomain =
         _fullDomain
-        .replacingOccurrences(of: "https://", with: "")
         .replacingOccurrences(of: "http://", with: "")
-    }
+	} else if fullDomain.starts(with: "https://"){
+		_fullDomain =
+		_fullDomain
+			.replacingOccurrences(of: "https://", with: "")
+	} else {
+		throw ChateeError.invalidDomain
+	}
     if _fullDomain.isValidDomain() {
-      self.fullDomain = _fullDomain
-      self.domainName = String(self.fullDomain.split(separator: ".").first ?? "")
+      self.fullDomain = fullDomain
+      self.domainName = String(_fullDomain.split(separator: ".").first ?? "")
       startupRouter?.navigate(to: StartupRouter.Destination.login)
 
       self.setupSession()
@@ -209,15 +214,16 @@ public class ChateeDataController: ObservableObject {
     self.domainToken = domainToken
     if domainToken.isEmpty {
 
-      let sessionManager = Session()
+		let customTrustManager = ServerTrustManager(evaluators: ["\(fullDomain)": DisabledTrustEvaluator()])
+		let sessionManager = Session(serverTrustManager: customTrustManager)
       self.apiClient = ChateeServerClient(
-        baseURL: "https://\(self.fullDomain)",
+        baseURL: "\(self.fullDomain)",
         sessionManager: sessionManager,
         defaultHeaders: [:])
     } else {
       let sessionManager = Session()
       self.apiClient = ChateeServerClient(
-        baseURL: "https://\(self.fullDomain)",
+        baseURL: "\(self.fullDomain)",
         sessionManager: sessionManager,
         defaultHeaders: ["Authorization": "Bearer \(domainToken)"])
     }
@@ -233,7 +239,7 @@ public class ChateeDataController: ObservableObject {
     do {
       guard
         let privKey = try? self.endpointController.endpointContainer
-          .cryptoApi.derivePrivateKey(from: username, and: password)
+          .cryptoApi.derivePrivateKey2(from: username, and: password)
       else {
         throw ChateeError.errorGeneratingPrivKey
       }
@@ -306,7 +312,7 @@ public class ChateeDataController: ObservableObject {
     do {
       guard
         let privKey = try? self.endpointController.endpointContainer
-          .cryptoApi.derivePrivateKey(from: username, and: password)
+          .cryptoApi.derivePrivateKey2(from: username, and: password)
       else {
         throw ChateeError.errorGeneratingPrivKey
       }
