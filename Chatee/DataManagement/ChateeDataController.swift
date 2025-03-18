@@ -188,7 +188,7 @@ public class ChateeDataController: ObservableObject {
     if fullDomain.starts(with: "http://") {
       _fullDomain =
         _fullDomain
-        .replacingOccurrences(of: "http://", with: "")
+        .replacingOccurrences(of: "https?://", with: "")
 	} else if fullDomain.starts(with: "https://"){
 		_fullDomain =
 		_fullDomain
@@ -196,7 +196,7 @@ public class ChateeDataController: ObservableObject {
 	} else {
 		throw ChateeError.invalidDomain
 	}
-    if _fullDomain.isValidDomain() {
+	  if _fullDomain.isValidAddress() {
       self.fullDomain = fullDomain
       self.domainName = String(_fullDomain.split(separator: ".").first ?? "")
       startupRouter?.navigate(to: StartupRouter.Destination.login)
