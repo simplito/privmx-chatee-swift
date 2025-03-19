@@ -12,14 +12,7 @@
 import Foundation
 import SwiftUI
 
-public struct StoreThread: Codable {
-	var name: String
-	var threadCompanion: Bool
-	var threadID: String?
-
-	public init(name: String, threadCompanion: Bool, threadID: String? = nil) {
-		self.name = name
-		self.threadCompanion = threadCompanion
-		self.threadID = threadID
-	}
+public struct MessagePublicMeta: Codable {
+	var pendingId: String = ""
+	var mimetype: String = "text/plain"
 }
