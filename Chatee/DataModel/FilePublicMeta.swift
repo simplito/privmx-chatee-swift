@@ -12,7 +12,7 @@
 import Foundation
 import SwiftUI
 
-public struct FilePrivateMeta: Codable {
+public struct FilePublicMeta: Codable {
 	var name: String
 	var chatId: String
 	var mimetype: String

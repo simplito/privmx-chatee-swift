@@ -217,15 +217,15 @@ open class StoreModel: ObservableObject {
 		in storeId: String, for threadId: String?, name: String, fileHandle: FileHandle,withSize size:Int64,
 		mimetype: String
 	) async throws -> String? {
-		let filePrivateMeta = FilePrivateMeta(
+		let filePublicMeta = FilePublicMeta(
 			name: name, chatId: threadId ?? "", mimetype: mimetype)
-		guard let encodedFilePrivateMeta = try? JSONEncoder().encode(filePrivateMeta) else {
+		guard let encodedFilePublicMeta = try? JSONEncoder().encode(filePublicMeta) else {
 			return nil
 		}
 		do {
 			let newFileId = try await self.uploadNewFile(
-				fileHandle,withSize:size, to: storeId, publicMeta: Data(),
-				privateMeta: encodedFilePrivateMeta)
+				fileHandle,withSize:size, to: storeId, publicMeta: encodedFilePublicMeta,
+				privateMeta: Data())
 			self.reload()
 			return newFileId
 		} catch (let err) {

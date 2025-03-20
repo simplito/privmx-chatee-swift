@@ -134,7 +134,7 @@ open class ThreadModel: Observable, ObservableObject {
 			do {
 				if let thread = self.thread {
 					_ = try self.endpoint?.threadApi?.sendMessage(
-						in: thread.id, withPublicMeta: Data(),
+						in: thread.id, withPublicMeta: try JSONEncoder().encode(MessagePublicMeta()),
 						withPrivateMeta: Data(), containing: content)
 
 				}
