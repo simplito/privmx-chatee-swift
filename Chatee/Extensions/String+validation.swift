@@ -14,10 +14,15 @@ import Foundation
 extension String {
 
 	func isValidDomain() -> Bool {
-		let domainRegex = "^[_a-z0-9]*.[_a-z0-9.]*$"
+		let domainRegex = "^https?://[a-z0-9](?:[a-z0-9-]*[a-z0-9]?)(?:\\.[a-z0-9][a-z0-9-]*)*(?::[1-9][0-9]{0,4})?$"
 		return NSPredicate(format: "SELF MATCHES %@", domainRegex).evaluate(with: self)
 	}
 
+	func isValidAddress() -> Bool{
+		self.contains(
+			#/^https?://(?:[0-9]{1,3}(?:\.[0-9]{1,3}){3}|[a-z0-9](?:[a-z0-9-]*[a-z0-9]?)(?:\.[a-z0-9][a-z0-9-]*)*)(?::[1-9][0-9]{0,4})?$/#
+		)
+	}
 	func containsLargeLetters() -> Bool? {
 		if self.count == 0 { return nil }
 		let largeLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"

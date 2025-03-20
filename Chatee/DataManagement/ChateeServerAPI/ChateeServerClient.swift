@@ -42,7 +42,7 @@ public class ChateeServerClient {
 		guard let url = URL(string: "\(baseURL)\(request.service.path)") else {
 			return Result.failure(ApiError.invalidURL)
 		}
-
+print(url)
 		var urlrequest = URLRequest(url: url)
 		urlrequest.httpMethod = request.service.method
 
