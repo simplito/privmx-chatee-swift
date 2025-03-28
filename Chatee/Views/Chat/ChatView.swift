@@ -150,7 +150,7 @@ struct ChatView: View {
 													fileName:
 														name
 												),
-											from: cu)
+											from: cu,isfile: true)
 									}
 
 								},

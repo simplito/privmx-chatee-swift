@@ -117,9 +117,9 @@ open class ThreadModel: Observable, ObservableObject {
 	/// - Parameters:
 	///   - content: The message content to send.
 	///   - user: The user sending the message.
-   public func send(message content: Codable, from user: UserEntry) {
+	public func send(message content: Codable, from user: UserEntry, isfile: Bool = false) {
 		if let data = try? JSONEncoder().encode(content) {
-			self.send(data: data, from: user)
+			self.send(data: data, from: user,isfile:isfile)
 		}
 	}
 
@@ -128,13 +128,13 @@ open class ThreadModel: Observable, ObservableObject {
     /// - Parameters:
     ///   - content: The message content as `Data`.
     ///   - user: The user sending the message.
-    public func send(data content: Data, from user: UserEntry) {
+	public func send(data content: Data, from user: UserEntry, isfile: Bool = false) {
 
 		Task {
 			do {
 				if let thread = self.thread {
 					_ = try self.endpoint?.threadApi?.sendMessage(
-						in: thread.id, withPublicMeta: try JSONEncoder().encode(MessagePublicMeta()),
+						in: thread.id, withPublicMeta: try JSONEncoder().encode(MessagePublicMeta(mimetype: isfile ? "file" : "text")),
 						withPrivateMeta: Data(), containing: content)
 
 				}
