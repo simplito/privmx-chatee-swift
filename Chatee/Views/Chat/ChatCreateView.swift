@@ -100,6 +100,9 @@ struct ChatCreateView: View {
 				style: .wide
 			) { onFinish in
 				Task {
+					defer{
+						self.hideCreateChat()
+					}
 					let newThreadNameSimplified =
 						newThreadName.trimmingCharacters(
 							in: .whitespacesAndNewlines)
@@ -142,7 +145,6 @@ struct ChatCreateView: View {
 						return
 
 					}
-
 				}
 
 			}
