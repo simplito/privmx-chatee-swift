@@ -14,7 +14,6 @@ import SwiftUI
 
 public struct StorePrivateMeta: Codable {
 	var title: String
-	var name: String {title}
 	public init(name: String) {
 		self.title = name
 	}
