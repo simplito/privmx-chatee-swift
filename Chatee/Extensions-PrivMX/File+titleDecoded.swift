@@ -15,9 +15,9 @@ import PrivMXEndpointSwiftNative
 extension privmx.endpoint.store.File {
 	public var titleDecoded: String {
 
-		if let titleJson = self.privateMeta.getData(),
+		if let titleJson = self.publicMeta.getData(),
 			let decodedfilePrivateMeta = try? JSONDecoder().decode(
-				FilePrivateMeta.self, from: titleJson)
+				FilePublicMeta.self, from: titleJson)
 		{
 			return decodedfilePrivateMeta.name
 		} else {

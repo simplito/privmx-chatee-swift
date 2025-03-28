@@ -13,8 +13,8 @@ import Foundation
 import SwiftUI
 
 public struct StorePrivateMeta: Codable {
-	var name: String
+	var title: String
 	public init(name: String) {
-		self.name = name
+		self.title = name
 	}
 }
