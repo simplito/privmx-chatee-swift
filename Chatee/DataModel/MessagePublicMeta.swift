@@ -14,5 +14,5 @@ import SwiftUI
 
 public struct MessagePublicMeta: Codable {
 	var pendingId: String = ""
-	var mimetype: String = "text/plain"
+	var mimetype: String = "text"
 }
