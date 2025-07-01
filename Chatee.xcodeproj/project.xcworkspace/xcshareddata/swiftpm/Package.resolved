@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/simplito/privmx-endpoint-swift",
       "state" : {
-        "revision" : "aed8b62967e87b12084087ea22dd24e3a267f659",
-        "version" : "2.3.0-rc5"
+        "revision" : "79651f74073233d8def9615a726d5b0b1aeb3416",
+        "version" : "2.3.0"
       }
     },
     {
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/simplito/privmx-endpoint-swift-extra",
       "state" : {
-        "revision" : "8ed804bf9378114833ba809e81c53cd1b8c73b57",
-        "version" : "2.3.0-rc6"
+        "revision" : "87b39da4e65078db3afb082b7779e83f0d3f91fa",
+        "version" : "2.3.0"
       }
     }
   ],
