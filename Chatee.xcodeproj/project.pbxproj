@@ -385,7 +385,7 @@
 			repositoryURL = "https://github.com/simplito/privmx-endpoint-swift-extra";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.2;
+				minimumVersion = 2.3.0;
 			};
 		};
 		E0EDBC4C2CA5BEC20082D1D0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
